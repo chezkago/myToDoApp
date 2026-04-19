@@ -35,6 +35,11 @@ function addTask(text) {
   span.addEventListener('click', function() {
     li.classList.toggle('completed');
     saveTasks();
+
+    // Show modal only when marking complete, not unchecking
+    if (li.classList.contains('completed')) {
+      showModal();
+    }
   });
 
   // Create the delete button
@@ -87,3 +92,25 @@ function loadTasks() {
     }
   });
 }
+
+// ── Modal ──
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modal-close');
+
+function showModal() {
+  modal.classList.add('active');
+}
+
+function hideModal() {
+  modal.classList.remove('active');
+}
+
+// Close when OK is clicked
+modalClose.addEventListener('click', hideModal);
+
+// Close when clicking outside the box
+modal.addEventListener('click', function(event) {
+  if (event.target === modal) {
+    hideModal();
+  }
+});
