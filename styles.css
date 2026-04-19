@@ -1,0 +1,123 @@
+/* ── Reset & base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  background-image: url('myToDo.jpg');
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 16px;
+}
+
+/* ── Container ── */
+.container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 40px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #6f6e6e;
+}
+
+/* ── Input area ── */
+.input-area {
+  font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+input[type="text"] {
+  font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  border-color: #4a90d9;
+}
+
+button#add-btn {
+  font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  padding: 10px 20px;
+  background-color: #f3d9da;
+  color: #888;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button#add-btn:hover {
+  background-color: #f3d9da;
+}
+
+/* ── Task list ── */
+#task-list {
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.task span {
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* ── Delete button ── */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.delete-btn:hover {
+  color: #e74c3c;
+}
+
+p{
+    text-align: center;
+    font-size: 25px;  
+    color: #888;
+    margin-bottom: 24px;
+}
+
+p, #warning-label{
+    text-align: center;
+    font-size: 14px;  
+    font: bold;
+    color: #888;
+}
+
